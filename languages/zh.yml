@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------
+# Page Settings
+# ---------------------------------------------------------------
+
+index:
+  title: "首頁"
+
+archive:
+  title: "歸檔"
+  counter:
+    zero: "未發現文章"
+    one: "總計 1 篇文章"
+    other: "總計 %d 篇文章"
+
+category:
+  title: "分類"
+  counter:
+    zero: "未發現此類文章"
+    one: "總計 1 篇此類文章"
+    other: "總計 %d 篇此類文章"
+
+tag:
+  title: "標籤"
+  counter:
+    zero: "此標籤下未發現文章"
+    one: "此標籤下總計 1 篇文章"
+    other: "此標籤下總計 %d 篇文章"
+
+toc:
+  title: "目錄"
+
+about:
+  title: "關於"
+
+nav:
+  prev: "上一頁"
+  next: "下一頁"
+
+post_info:
+  date: "更新於："
+  author: "作者："
+
+article_license:
+  claim: "%(cc_icon)s 本篇文章：『%(article_name)s』內容受 %(cc_license)s 的保護"
+  credit: "轉載請註明作者姓名：「%(author_name)s」和出處：%(article_source)s"
+  CC:
+    by: "Creative Commons Attribution 4.0 International"
+    by-sa: "Creative Commons Attribution-ShareAlike 4.0 International"
+    by-nd: "Creative Commons Attribution-NoDerivatives 4.0 International"
+    by-nc: "Creative Commons Attribution-NonCommercial 4.0 International"
+    by-nc-sa: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+    by-nc-nd: "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+
+site_license:
+  claim: "%(domain)s 之代碼受 %(license)s 保護。"
+
+lack_info:
+  no_author: "匿名"
+  no_title: "無題"

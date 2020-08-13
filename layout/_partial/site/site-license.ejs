@@ -1,0 +1,50 @@
+<%
+  var site_var_mit = {
+    domain: '<a href="//zhao.center">「ZHAO.CENTER」</a>',
+    license: '<a rel="license" href="https://github.com/zhao-center/zhao-center.github.io/blob/master/LICENSE" target="_blank">MIT License</a>'
+  }
+
+  var site_var_gplv3 = {
+    domain: '<a href="//zhao.center">「ZHAO.CENTER」</a>',
+    license: '<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU GENERAL PUBLIC LICENSE (GPLv3)</a>'
+  }
+
+  var site_var_gplv2 = {
+    domain: '<a href="//zhao.center">「ZHAO.CENTER」</a>',
+    license: '<a rel="license" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank">GNU GENERAL PUBLIC LICENSE (GPLv2)</a>'
+  }
+%>
+
+<% if(theme.license) { %>
+  <!-- Site licenses -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+
+      <% if(theme.license.MIT) { %>
+        <!-- MIT -->
+        <div class="container">
+          <%- _p("site_license.claim", site_var_mit) %>
+        </div>
+      <% } %>
+
+      <% if(theme.license.GPLv3) { %>
+        <!-- GPLv3 -->
+        <div class="container">
+          <%- _p("site_license.claim", site_var_gplv3) %>
+        </div>
+      <% } %>
+
+      <% if(theme.license.GPLv2) { %>
+        <!-- GPLv2 -->
+        <div class="container">
+          <%- _p("site_license.claim", site_var_gplv2) %>
+        </div>
+      <% } %>
+
+      <!-- Site info -->
+      <div class="content has-text-centered">
+        <%- partial('site-info') %>
+      </div>
+    </div>
+  </footer>
+<% } %>

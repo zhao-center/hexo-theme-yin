@@ -1,0 +1,100 @@
+<header class="navbar" id="myMenu" style="background-color:transparent"></header>
+
+<header class="navbar is-black is-fixed-top" id="myScrollMenu">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="<% if (theme.image.logo){ %><%= theme.image.logo %><% } %>" alt="Logo">
+      </a>
+      <span class="navbar-burger burger" data-target="navbarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <% if (theme.menu.home) { %>
+        <a class="navbar-item" href="<%= theme.menu.home %>">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+          <span><%=  __("index.title") %></span>
+        </a>
+        <% } %><% if (theme.menu.archives) { %>
+        <a class="navbar-item" href="<%= theme.menu.archives %>">
+          <span class="icon">
+            <i class="fas fa-archive"></i>
+          </span>
+          <span><%= __("archive.title") %></span>
+        </a>
+        <% } %><% if (theme.menu.about) { %>
+        <a class="navbar-item" href="<%= theme.menu.about %>">
+          <span class="icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </span>
+          <span><%= __("about.title") %></span>
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(document).ready(function() {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
+
+<script>
+  var header = document.getElementById("myMenu");
+
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $([id=myScrollMenu]).outerHeight();
+
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta) {
+        return;
+      }
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $([id=myScrollMenu]).hide();
+      } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+          $([id=myScrollMenu]).show();
+        }
+      }
+
+      lastScrollTop = st;
+  }
+</script>

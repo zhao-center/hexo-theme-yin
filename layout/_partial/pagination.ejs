@@ -1,0 +1,36 @@
+<% if (page.total > 1) { %>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+              <% if (page.prev) { %>
+                <a class="pagination-previous" href="<%- url_for(page.prev_link) %>">
+                  <i class="fas fa-chevron-circle-left" aria-hidden="true"></i>
+                  <span><%= __("nav.prev") %></span>
+                </a>
+              <% } else { %>
+                <a class="pagination-previous" disabled>
+                  <i class="fas fa-chevron-circle-left" aria-hidden="true"></i>
+                  <span><%= __("nav.prev") %></span>
+                </a>
+              <% } %>
+              <% if (page.next) { %>
+                <a class="pagination-next" href="<%- url_for(page.next_link) %>">
+                  <span><%= __("nav.next") %></span>
+                  <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+              <% } else { %>
+                <a class="pagination-next" disabled>
+                  <span><%= __("nav.next") %></span>
+                  <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+              <% } %>
+            </nav>
+          </div>
+        </div>
+      <span></span>
+
+    </div>
+  </section>
+<% } %>

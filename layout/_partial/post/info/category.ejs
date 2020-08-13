@@ -1,0 +1,11 @@
+<% if (post.categories && post.categories.length){ %>
+  <!-- categories -->
+  <%
+    var categories = [];
+    post.categories.forEach(function(category){
+        categories.push('<a href="' + config.root + category.path + '">' + category.name + '</a>');
+    });
+  %>
+    <a class="icon is-medium"><i class="fas fa-folder"></i></a>
+  <%- categories.join(' / ') %>
+<% } %>

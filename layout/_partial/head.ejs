@@ -1,0 +1,90 @@
+<%
+var description = "";
+var author = "";
+var keywords = "";
+
+if (config.description) {
+  description = config.description;
+}
+
+if (config.author) {
+  author = config.author;
+}
+
+if (page.excerpt) {
+  description = strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '');
+} else if (page.description) {
+  description = page.description;
+}
+
+if (page.author) {
+  author = page.author;
+}
+
+if (page.tags && page.tags.each) {
+  page.tags.each(function(tag) {
+    keywords += ", " + tag.name;
+  })}
+
+if (page.categories && page.categories.each) {
+  page.categories.each(function(category) {
+    keywords += ", " + category.name;
+  })}
+
+if (keywords) {
+  keywords = keywords.substr(2);
+}
+
+
+var meta = {
+  description,
+  author,
+  keywords
+}
+%>
+<head>
+
+  <!-- standard meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+
+  <!-- title -->
+  <title><% if(page.title) { %><%- page.title %> - <% } %> 趙|ZHAO</title>
+  <link rel="icon" href="<%= theme.image.favicon %>">
+
+  <!--describe-->
+  <% if (meta.description) { %><meta name="description" content="<%= meta.description %>"><% } %>
+  <% if (meta.author) { %><meta name="author" content="<%= meta.author %>"><% } %>
+  <% if (meta.keywords) { %><meta name="keywords" content="<%= meta.keywords %>"><% } %>
+
+  <!-- CDN -->
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha384-H5O3U+oUYwd/bFECZMaQ1XJlueV5e1gB4b7Xt0M06fPbgz48WH33qxUyQNPeZVou" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- highlight.js - Syntax highlighting for the Web -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-dark.min.css" integrity="sha384-kJyF1GiRjnKAF7V97Wi5c9+Jgxv+ZanyOLOisWSZMJzTEX/AJSxGqwtBnD/9r4T6" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js" integrity="sha384-T+w74+ZcvFfVqhBgPlvEYQ8xtCT/GIKWZa6UREApz0kndqJSZMXfJ6urjwKHJsVi" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.highlight').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+    <!-- MathJax - A JavaScript display engine for mathematics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" integrity="sha384-paYjEtNXu9X/q6SBQB9EivI88vKEc/TiZWUaaH5j2Hi4vAOnVYmcahbzUELr3LHw" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <!-- PACE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" integrity="sha384-5DyzDgtTHw1bbnR1u2aQPxi5+e1KVPsygV5Pioo5W+5ua3sN5AHF05kzM0QfXXqm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css" integrity="sha384-ayUaxq7VgCwHzVzaPLlC/1hjeanxNMWR4YOX2XGLngoRi/8gvsPxlSb8OeB5qYzf" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>

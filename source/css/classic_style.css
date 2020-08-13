@@ -1,0 +1,15 @@
+/* Background */
+body {
+  background-image: url("/images/background/dark-denim-3.png");
+  background: #424c50 !important; /* 鴉青 */
+  color: #d6ecf0 !important; /* 月白 */
+}
+
+/* change href color */
+a {
+  color: #6b9ac9 !important; /* 竹月色 */
+}
+
+a:hover {
+  color: #fef4b4 !important; /* 富春紡色 */
+}

@@ -1,0 +1,13 @@
+<header class="header has-text-centered">
+
+    <!-- Title -->
+    <h1 class="title is-2 is-spaced"><%= post.title %></h1>
+
+    <!-- Date, Author -->
+    <h2 class="subtitle is-6">
+      <%- partial('info/date') %> <% if (post.date && post.author) { %>|<% } %> <%- partial('info/author') %>
+    </h2>
+
+    <br>
+
+</header>

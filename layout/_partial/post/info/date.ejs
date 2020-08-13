@@ -1,0 +1,5 @@
+<% if (post.date) { %>
+  <time datetime="<%= date_xml(post.date) %>">
+    <span class="icon"><i class="fas fa-calendar-alt"></i></span><%= post.date.format(config.date_format) %>
+  </time>
+<% } %>

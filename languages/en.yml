@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------
+# Page Settings
+# ---------------------------------------------------------------
+
+index:
+  title: "Index"
+
+archive:
+  title: "Archives"
+  counter:
+    zero: "No posts"
+    one: "1 post in total"
+    other: "%d posts in total"
+
+category:
+  title: "Categorys"
+  counter:
+    zero: "No posts in this category"
+    one: "1 post in this category"
+    other: "%d posts in this category"
+
+tag:
+  title: "Tags"
+  counter:
+    zero: "No posts in this tag"
+    one: "1 post in this tag"
+    other: "%d posts in this tag"
+
+toc:
+  title: "Menu"
+
+about:
+  title: "About"
+
+nav:
+  prev: "Prev"
+  next: "Next"
+
+post_info:
+  date: "Update："
+  author: "Author："
+
+article_license:
+  claim: "%(cc_icon)s This post: \"%(article_name)s\" licensed under the %(cc_license)s license"
+  credit: "Please refer the author: \"%(author_name)s\" with the source: %(article_source)s"
+  CC:
+    by: "Creative Commons Attribution 4.0 International"
+    by-sa: "Creative Commons Attribution-ShareAlike 4.0 International"
+    by-nd: "Creative Commons Attribution-NoDerivatives 4.0 International"
+    by-nc: "Creative Commons Attribution-NonCommercial 4.0 International"
+    by-nc-sa: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+    by-nc-nd: "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+
+site_license:
+  claim: "%(domain)s is released under the %(license)s license"
+
+lack_info:
+  no_author: "(No Author)"
+  no_title: "(No Title)"

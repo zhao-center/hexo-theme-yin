@@ -1,0 +1,29 @@
+<section class="section">
+
+  <!-- Title, Date -->
+  <%- partial('post-header', {post: post}) %>
+
+  <div class="container">
+    <div class="content">
+
+      <% if (page.toc) { %>
+        <h1> <%= __("toc.title") %> </h1>
+        <%- toc_simple(page.content, {
+          class: 'toc_simple',
+          list_number: false
+        }) %>
+      <% } %>
+
+        <!-- Content -->
+        <%- post.content %>
+
+        <!-- Tags and Categories links -->
+        <%- partial('post-collect', {post: post}) %>
+
+        <!-- Post License -->
+        <%- partial('post-license') %>
+
+    </div>
+  </div>
+
+</section>

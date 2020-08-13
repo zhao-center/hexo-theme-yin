@@ -1,0 +1,10 @@
+<% if (post.tags && post.tags.length){ %>
+  <!-- tags -->
+  <%
+    var tags = [];
+    post.tags.forEach(function(tag){
+        tags.push('<a href="' + config.root + tag.path + '"><span class="icon is-medium"><i class="fas fa-tag"></i></span>' + tag.name + '</a>');
+    });
+  %>
+  <%- tags.join(' ') %>
+<% } %>

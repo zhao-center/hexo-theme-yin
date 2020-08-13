@@ -1,0 +1,99 @@
+<%
+  /* CC license */
+  var cc_license_switch = false;
+  var cc_license_choice;
+
+  if(post.license) {
+
+    if(post.license.CC == false) {
+      cc_license_switch = false;
+    } else {
+      cc_license_switch = true;
+      cc_license_choice = post.license.CC;
+    }
+
+  } else if (theme.license) {
+
+    if (theme.license.CC) {
+      cc_license_switch = true;
+      cc_license_choice = theme.license.CC;
+    }
+
+  }
+%>
+
+<% if(cc_license_switch) { %>
+  <!-- license -->
+  <footer>
+    <div class="content has-text-centered">
+      <!-- Creative Commons -->
+        <%
+
+          /* choice cc */
+          var current_cc_license = "";
+          var license_link = "article_license.CC.";
+
+          switch (cc_license_choice) {
+            case 'BY':
+              current_cc_license = "by";
+              break;
+            case 'BY-SA':
+              current_cc_license = "by-sa";
+              break;
+            case 'BY-ND':
+              current_cc_license = "by-nd";
+              break;
+            case 'BY-NC':
+              current_cc_license = "by-nc";
+              break;
+            case 'BY-NC-SA':
+              current_cc_license = "by-nc-sa";
+              break;
+            case 'BY-NC-ND':
+              current_cc_license = "by-nc-nd";
+              break;
+            default:
+              current_cc_license = "by";
+          }
+
+          /* cc_icon */
+          var cc_icon_image = '<i class="fab fa-creative-commons"></i>'
+          var cc_license_link = 'http://creativecommons.org/licenses/' + current_cc_license + '/4.0/'
+          var cc_icon = '<a rel="license" href="' + cc_license_link + '" target="_blank">' + cc_icon_image + '</a>'
+
+          /* cc_license */
+          var cc_license = '<a rel="license" href="' + cc_license_link + '" target="_blank">' + __(license_link+current_cc_license) + '</a>'
+
+          /* article_name */
+          var article_name_link = config.root + post.path
+          var article_name_text = post.title || post.link
+          var article_name = '<a href="' + article_name_link + '">' + article_name_text + '</a>'
+
+          /* author_name */
+          var author_name = post.author || __("lack_info.no_author")
+
+          /* article_source */
+          var article_source = '<a href="' + article_name_link + '">' + theme.hexo_theme_yin.website_link + article_name_link  + '</a>'
+
+          /* article_license_var */
+          var article_license_var = {
+            cc_icon,
+            cc_license,
+            article_name,
+            author_name,
+            article_source
+          }
+        %>
+
+        <div class="container">
+
+          <%- _p("article_license.claim", article_license_var ) %>
+
+          <br />
+
+          <%- _p("article_license.credit", article_license_var ) %>
+
+        </div>
+    </div>
+  </footer>
+<% } %>

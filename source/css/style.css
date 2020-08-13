@@ -1,0 +1,258 @@
+/* notice:
+  some code in this page is inspired from:
+  [bulmaswatch](https://github.com/jenil/bulmaswatch/blob/gh-pages/darkly/bulmaswatch.min.css)
+*/
+
+/* background */
+html {
+  background-color: #1a1a1a;
+  color: #ccc;
+
+  overflow-y:auto; /* hidde scrollbar */
+}
+
+/* body */
+body {
+  line-height: 1.75em;
+}
+
+/* title */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: #cecece;
+}
+
+.title{
+  color: #eee;
+}
+
+.subtitle {
+  color: #eee;
+}
+
+.content {
+  color: #ccc;
+}
+
+/* strong */
+strong {
+  color: #e2e2e2;
+  font-weight: 700;
+}
+
+/* change href color */
+.content a {
+  color: #8ab5e5;}
+.content a strong {
+  color: currentColor; }
+.content a:hover {
+  color: #bb86fc;
+  text-decoration: underline; }
+
+/* blockquote */
+.content blockquote{
+  background-color:#282f2f;
+  border-left:5px solid #5e6d6f;
+}
+
+/* table */
+.content table thead td,
+.content table thead th,
+.table thead td,
+.table thead th {
+    color: #e2e2e2;
+}
+
+/* code highlight */
+code {
+  background-color: #282f2f;
+  color: #e74c3c;
+  font-size: 0.875em;
+  font-weight: normal;
+  padding: 0.25em 0.5em 0.25em;
+}
+
+.content pre,
+.content .highlight {
+  background: #282c34;
+  overflow: auto;
+  color: #abb2bf;
+  border-radius: 0.5em;
+  border: 0.1em solid #282c34;
+}
+
+.content .highlight .gutter pre {
+  color: #666;
+}
+
+.content pre,
+.content code {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.content pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+}
+
+.content .highlight pre {
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+.content .highlight table {
+  margin: 0;
+  width: auto;
+}
+
+.content .highlight td {
+  border: none;
+  padding: 0;
+}
+
+.content .highlight .gutter pre {
+  text-align: right;
+  padding-right: .1em;
+}
+
+.content figure.highlight {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content .highlight pre span.number{
+  height: 1em;
+  font-size: 1em;
+  padding: 0;
+  vertical-align: center;
+  margin-right: 0;
+  background-color: transparent;
+  border-radius: 0;
+  display: inline;
+}
+
+.content .highlight pre span.title{
+  height: 1em;
+  font-size: 1em;
+  padding: 0;
+  margin-right: 0;
+  color: #abb2bf;
+  background-color: transparent;
+  border-radius: 0;
+  display: inline;
+}
+
+.content .highlight figcaption {
+  font-size: 0.85em;
+  line-height: 1em;
+  margin-top: 0.5em;
+}
+
+.content .highlight .marked {
+  background-color: #515151;
+}
+
+/* embed vedio */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /*16:9*/
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer{
+  background-color:#0a0a0a;
+}
+
+/* navbar */
+.navbar.is-black .navbar-end .navbar-link.is-active,
+.navbar.is-black .navbar-end .navbar-link:focus,
+.navbar.is-black .navbar-end .navbar-link:hover,
+.navbar.is-black .navbar-end > a.navbar-item.is-active,
+.navbar.is-black .navbar-end > a.navbar-item:focus,
+.navbar.is-black .navbar-end > a.navbar-item:hover,
+.navbar.is-black .navbar-start .navbar-link.is-active,
+.navbar.is-black .navbar-start .navbar-link:focus,
+.navbar.is-black .navbar-start .navbar-link:hover,
+.navbar.is-black .navbar-start > a.navbar-item.is-active,
+.navbar.is-black .navbar-start > a.navbar-item:focus,
+.navbar.is-black .navbar-start > a.navbar-item:hover {
+    color: #bb86fc;
+}
+
+.navbar-link.is-active, .navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+    background-color: #262626;
+}
+
+.navbar .navbar-menu {
+  background-color: #0a0a0a;}
+
+.navbar-item, .navbar-link {
+    color: #eee;
+}
+
+.navbar.is-black .navbar-end .navbar-link,
+.navbar.is-black .navbar-end > .navbar-item,
+.navbar.is-black .navbar-start .navbar-link,
+.navbar.is-black .navbar-start > .navbar-item {
+    color: #eee;
+}
+
+/* pagination */
+.pagination-previous,
+.pagination-next,
+.pagination-link {
+  border-color: #5e6d6f;
+  color: #8ab5e5;
+  min-width: 2.25em; }
+.pagination-link,
+.pagination-next,
+.pagination-previous {
+  border-width: 2px; }
+.pagination-previous:hover,
+.pagination-next:hover,
+.pagination-link:hover {
+  border-color: #8c9b9d;
+  color: #bb86fc; }
+.pagination-previous:focus,
+.pagination-next:focus,
+.pagination-link:focus {
+  border-color: #8c9b9d; }
+.pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active {
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2); }
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled] {
+  background-color: #dbdee0;
+  border-color: #dbdee0;
+  box-shadow: none;
+  color: #5e6d6f;
+  opacity: 0.5; }
