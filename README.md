@@ -19,7 +19,7 @@ cd themes/hexo-theme-yin
 vi _config.yml
 ```
 
-3. Add `hexo-theme-yin` to hexo `_config.yml`:
+3. Add `hexo-theme-yin` to Hexo's `_config.yml`:
 
 ```bash
 theme: hexo-theme-yin
@@ -29,6 +29,6 @@ theme: hexo-theme-yin
 
 check out more config examples in ``<hexo-theme-yin>/examples/``
 
-* [example config file for hexo](examples/_config.hexo.example.yml)
-* [example config file for hexo-theme-yin](examples/_config.theme.example.yml)
-* [example post for hexo-theme-yin](examples/post.example.md)
+* [config for hexo](examples/_config.hexo.example.yml)
+* [config for hexo-theme-yin](examples/_config.theme.example.yml)
+* [post for hexo-theme-yin](examples/post.example.md)
