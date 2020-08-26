@@ -2,7 +2,7 @@
 
 ## hexo-theme-yin
 
-yet, another simple hexo theme for [zhao-center](https://zhao.center)
+yet, another simple hexo theme for [zhao.center](https://zhao.center)
 
 ## Installation
 
