@@ -15,26 +15,26 @@
   }
 %>
 
-<% if(theme.license) { %>
+<% if (theme.license) { %>
   <!-- Site licenses -->
   <footer class="footer">
     <div class="content has-text-centered">
 
-      <% if(theme.license.MIT) { %>
+      <% if (theme.license.MIT) { %>
         <!-- MIT -->
         <div class="container">
           <%- _p("site_license.claim", site_var_mit) %>
         </div>
       <% } %>
 
-      <% if(theme.license.GPLv3) { %>
+      <% if (theme.license.GPLv3) { %>
         <!-- GPLv3 -->
         <div class="container">
           <%- _p("site_license.claim", site_var_gplv3) %>
         </div>
       <% } %>
 
-      <% if(theme.license.GPLv2) { %>
+      <% if (theme.license.GPLv2) { %>
         <!-- GPLv2 -->
         <div class="container">
           <%- _p("site_license.claim", site_var_gplv2) %>

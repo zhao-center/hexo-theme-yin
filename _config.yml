@@ -32,7 +32,7 @@ license:
           # Check those links for more details:
           # https://creativecommons.org/choose/
           # https://creativecommons.org/licenses/
-          # YOU CAN ALSO SET THIS IN A SPECIFIC POST
+          # YOU CAN ALSO SET THIS IN THE POST FRONT MATTER
 
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
@@ -57,11 +57,3 @@ menu:
   archives: /archives
   about: /about
 
-# ---------------------------------------------------------------
-# Contact Settings
-# ---------------------------------------------------------------
-
-contact:
-  email: zhao_center@gmx.com
-  github: zhao-center
-  telegram:

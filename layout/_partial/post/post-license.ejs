@@ -3,9 +3,9 @@
   var cc_license_switch = false;
   var cc_license_choice;
 
-  if(post.license) {
+  if (post.license) {
 
-    if(post.license.CC == false) {
+    if (post.license.CC == false) {
       cc_license_switch = false;
     } else {
       cc_license_switch = true;
@@ -22,7 +22,7 @@
   }
 %>
 
-<% if(cc_license_switch) { %>
+<% if (cc_license_switch) { %>
   <!-- license -->
   <footer>
     <div class="content has-text-centered">

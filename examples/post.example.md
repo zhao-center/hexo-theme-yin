@@ -12,7 +12,6 @@ categories:
 - categorie3
 
 # customize options below ↓↓↓↓↓↓
-toc: false #table of contents
 description: "This is a meta description" # page.excerpt will become meta description by default
 license:
   CC: false
@@ -27,7 +26,7 @@ license:
   # Check those links for more details:
   # https://creativecommons.org/choose/
   # https://creativecommons.org/licenses/
-  # YOU CAN ALSO SET THIS GLOBALLY
+  # YOU CAN ALSO SET THIS IN THE THEME CONFIG
 ---
 
 Post contents here ...

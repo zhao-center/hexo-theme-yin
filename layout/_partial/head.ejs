@@ -49,7 +49,7 @@ var meta = {
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
 
   <!-- title -->
-  <title><% if(page.title) { %><%- page.title %> - <% } %> 趙|ZHAO</title>
+  <title><% if(page.title) { %><%- page.title %> - <% } %><%- config.title %></title>
   <link rel="icon" href="<%= theme.image.favicon %>">
 
   <!--describe-->
@@ -59,7 +59,7 @@ var meta = {
 
   <!-- CDN -->
     <!-- Bulma -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha384-H5O3U+oUYwd/bFECZMaQ1XJlueV5e1gB4b7Xt0M06fPbgz48WH33qxUyQNPeZVou" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha384-4em484va1axTOWEtQ2De+F+ZcQgGnWxvbINokKfnVZxyJZP5Iu0RzVqk6N29pMxQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- highlight.js - Syntax highlighting for the Web -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-dark.min.css" integrity="sha384-kJyF1GiRjnKAF7V97Wi5c9+Jgxv+ZanyOLOisWSZMJzTEX/AJSxGqwtBnD/9r4T6" crossorigin="anonymous">
